@@ -1,0 +1,78 @@
+//- Extend layout
+//-------------------------------------------------
+include ../atoms/**/*.jade
+extends ../layout/layout
+
+
+//- Page
+//-------------------------------------------------
+block append layout-body
+  body.l-body
+    +a-loader()
+
+    .l-page
+      +a-header('index')
+
+      main.l-main.l-main-index
+        .panel.panel-1
+          .l-wrap.c-anim-fade-in
+            .panel-in
+              h3.c-name
+                | Официальный оператор<br>
+                span.alt рекламы московских <br> аэропортов
+              .panel__content В своей работе мы стремимся сделать пребывание пассажира «в пути» более комфортным и интересным, а для Рекламодателей контакт со своим потребителем более эффективным.
+          //- panel
+
+
+        .panel.panel-2
+          .l-wrap.c-anim-fade-in
+            .panel-in
+              h3.c-name
+                | Реклама<br>
+                span.alt в аэропортах
+              .panel__content.small
+                p Реклама в аэропортах — это эффективный инструмент для амбициозного заявления о себе не только на российском, но и на международном рынке.
+                p Преимущество региональных аэропортов для рекламодателей заключается в возможности использования нестандартных способов продвижения, которые позволяют сосредоточиться на качественной аудитории с таргетингом по географическому принципу.
+                p Современные возможности авиа рекламы еще не исчерпаны. Да и сам отечественный рынок рекламы в аэропортах и бортовых изданиях, несмотря на прогрессирующий рост, находится в начальной стадии своего развития.
+                a(href="inside.html").btn.mt15 Подробнее
+        //- panel
+
+
+        .panel-3
+          .l-wrap.c-anim-fade-in
+            h3.c-name.right.black
+              | Наши&nbsp;
+              span.alt кейсы
+            .cases.cases_margin
+              .swiper-container.js-slider
+                .cases-nav.prev.js-prev
+                .cases-nav.next.js-next
+                .swiper-wrapper
+                  .swiper-slide
+                    +a-case('Рекламная кампания', 'В своей работе мы стремимся сделать пребывание пассажира «в пути» более комфортным и интересным, а для Рекламодателей контакт со своим потребителем более эффективным.')
+                  .swiper-slide
+                    +a-case('Продажи растут', 'а «в пути» более комфортным и интересным, а для Рекламодателей контакт со своим потребителем более эффективным.')
+                  .swiper-slide
+                    +a-case('Третий блок', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam')
+        //- panel-3
+
+
+        .partners
+          .l-wrap
+            h3.c-name.center
+              | Наши&nbsp;
+              span.alt Партнеры
+            .partners__content
+              mixin partner(pic)
+                a(href="#").partner.c-anim-fade-in: img(src="img/partner-#{pic}.png", alt="alt")
+
+              +partner("mts")
+              +partner("air")
+              +partner("sita")
+              +partner("zh")
+              +partner("alfa")
+              +partner("rosbank")
+        partners
+
+
+        +a-contacts

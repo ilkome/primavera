@@ -1,0 +1,180 @@
+.contacts
+  position relative
+  display flex
+  margin-top -90px
+  padding-top 160px
+  background url(../img/bg-contacts.png) center 0 no-repeat
+  color $black
+
+  &__left
+    width 38%
+
+  &__right
+    flex-grow 1
+
+
+  // phone
+  // ================================================
+  &__phone
+    z-index 2
+    position relative
+    margin-right -50%
+    padding 70px 65px
+    text-align right
+    background #edebec
+    box-shadow 1px 2px 5px rgba(0, 0, 0, 0.35)
+
+    .name
+      padding-bottom 10px
+      font-size 25px
+      $font100()
+      .alt
+        $font500()
+
+    .phone
+      font-size 35px
+      letter-spacing 1.3px
+      $font300()
+      .alt
+        display inline-block
+        padding-left 5px
+        color $orange
+        font-size 53px
+        $font500()
+
+
+  // write
+  // ================================================
+  &__write
+    padding 30px
+    padding-right 40px
+    text-align right
+    .email
+      padding-bottom 25px
+      a
+        color $white
+        font-size 20px
+
+
+  // map
+  // ================================================
+  &__map
+    margin-top 35px
+    padding-top 5px
+    padding-left 5px
+    border 2px solid #edebec
+    border-right none
+    border-bottom none
+
+    .js-map-marker
+      padding 5px 10px 5px 13px
+      color white
+      font-size 12px
+      background rgba(240,87,56,.4)
+      border-radius 3px
+
+    .js-map
+      height 430px
+      .gmnoprint:not(.gm-bundled-control)
+          display none
+
+
+      .gm-bundled-control .gmnoprint
+          display block
+
+      a[href^="http://maps.google.com/maps"]
+      a[href^="https://maps.google.com/maps"]
+      a[href^="https://www.google.com/maps"]
+        display:none !important
+
+
+// popup
+// ===============================================
+.contacts-pop
+  display flex
+  align-items center
+  flex-wrap wrap
+  color $white
+  transform translate3d(0, 0, 0)
+  background #232331
+
+
+// form
+// ===============================================
+.contacts-form
+  display none
+  width 740px
+  margin 0 auto
+  padding 140px 50px
+  text-align center
+
+  .line
+    display flex
+    justify-content space-between
+    padding-bottom 20px
+
+  .input
+    width 50%
+    margin 0 10px
+    padding 10px 0
+    $font300()
+    color $white
+    font-size 20px
+    background none
+    border none
+    border-bottom 2px solid #ffc80b
+
+    &::-webkit-input-placeholder
+      $font100()
+    &::-moz-placeholder
+      $font100()
+    &:-ms-input-placeholder
+      $font100()
+    &:-moz-placeholder
+      $font100()
+
+    &:focus
+      border-color $white
+
+  .textarea
+    width 100%
+    height auto
+    margin 0 10px
+    padding 10px 0
+    color $white
+    font-size 20px
+    $font300()
+    background none
+    border none
+    border-bottom 2px solid #ffc80b
+
+    &::-webkit-input-placeholder
+      $font100()
+    &::-moz-placeholder
+      $font100()
+    &:-ms-input-placeholder
+      $font100()
+    &:-moz-placeholder
+      $font100()
+
+    &:focus
+      border-color $white
+
+  .submit
+    margin-top 20px
+
+
+// thanks
+// ===============================================
+.contacts-thanks
+  display none
+  width 740px
+  margin 0 auto
+  padding 160px 50px
+  padding-bottom 60px
+  text-align center
+
+  .text
+    margin-bottom 60px
+    $font300()
+    font-size 20px

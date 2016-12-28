@@ -1,0 +1,99 @@
+.case-page
+  padding-bottom 140px
+  color $black
+
+  &__pic
+    position relative
+    margin-bottom 50px
+    text-align center
+
+  &__in
+    display flex
+    padding-bottom 60px
+
+  &__content
+    flex 0 0 65%
+
+  &__info
+    padding-top 5px
+    // flex 0 0 auto
+
+
+// desc
+// ===============================================
+.case-desc
+  padding-right 40px
+
+  .name
+    margin-bottom 20px
+    font-size 30px
+    $font500()
+    margin-bottom 5px
+
+  .company
+    padding-bottom 15px
+    color $blue
+    font-size 20px
+    $font300()
+
+  .text
+    font-size 20px
+    line-height 28px
+
+
+// info
+// ===============================================
+.case-info
+  margin-right -550px
+  margin-top -140px
+  padding 135px 0 30px 25px
+  font-size 20px
+  $font500()
+  border 1px solid rgba(0, 0, 0, 0.15)
+  box-shadow 1px 3px 5px rgba(0, 0, 0, 0.3)
+
+  &__line
+    margin-bottom 25px
+
+  .name
+    margin-bottom 5px
+
+  .text
+    color $blue
+
+
+// gallery
+// ===============================================
+.case-gallery
+  display flex
+  flex-flow wrap
+  justify-content space-between
+
+  &:after
+    content ''
+    flex-basis (100/3)%
+
+  &__item
+    position relative
+    flex-basis (100/3)%
+    margin-bottom 10px
+    ainm-all()
+
+    &:hover
+      .hover
+        opacity 0
+
+    .hover
+      position absolute
+      square(100%)
+      background rgba(255, 255, 255, 0.75)
+      anim-all()
+
+      &:after
+        content ''
+        position absolute
+        left 50%
+        top 50%
+        square(56px)
+        transform translate(-50%, -50%)
+        background url(../img/case-zoom.png) 0 0 no-repeat

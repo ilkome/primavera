@@ -1,0 +1,42 @@
+// item
+// ===============================================
+.texts__item
+  color $white
+  flex-basis (100/3.3)%
+  padding-bottom 90px
+  font-size 20px
+
+  .name
+    margin-bottom 20px
+    $font500()
+    text-transform uppercase
+
+    &:after
+      content ' '
+      display block
+      width 68px
+      height 2px
+      margin-top 10px
+      background $white
+
+
+// parent
+// ===============================================
+.texts
+  position relative
+  height 880px
+  margin-top -60px
+  padding-top 265px
+  background url(../img/bg-texts.png) center 0 no-repeat
+
+  &__name
+    margin-bottom 70px
+
+  &__content
+    display flex
+    flex-wrap wrap
+    justify-content space-between
+
+    &:after
+      content ""
+      flex-basis (100/3.3)%

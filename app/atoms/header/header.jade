@@ -1,0 +1,23 @@
+mixin a-header(activePage, bg)
+  header.header
+    .header-wrap
+      .header-in(class=typeof bg !== "undefined" ? "bg-none" : "")
+        .header__logo
+          a(href="index.html").logo
+        .header__contacts
+          .phone: +c-phone
+          .email: +c-email
+
+        .header__menu
+          ul.menu
+            +a-header-menu-link('О компании', 'index', activePage)
+            +a-header-menu-link('Реклама в эропортах', 'inside', activePage)
+            +a-header-menu-link('Наружная реклама', 'outside', activePage)
+            +a-header-menu-link('Кейсы', 'cases', activePage)
+            //- +a-header-menu-link('Партнеры', '#', activePage)
+            +a-header-menu-link('Контакты', 'contacts', activePage)
+
+
+mixin a-header-menu-link(name, link, activePage)
+  li.item(class= link === activePage ? "active" : "")
+    a(href=typeof link === "undefined" ? "" : link + ".html").link= name

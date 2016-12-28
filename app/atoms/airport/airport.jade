@@ -1,0 +1,10 @@
+mixin a-airports-item(pic, name, sheme, alt)
+  .airports__item(class=typeof alt !== "undefined" ? "alt" : "").c-anim-fade-in
+    .pic: img(src="img/airport-#{pic}.png", alt="Жуковский")
+    .content
+      h4.name= name
+      .text
+        .line.companies 67 авиакомпаний
+        .line.people 30,5 млн человек в год
+      if sheme
+        a(href="#").btn.btn-big Схема

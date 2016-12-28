@@ -1,0 +1,57 @@
+borderbox-all()
+
+html
+  height 100%
+  font-size 16px
+  -ms-text-size-adjust 100%
+  -webkit-text-size-adjust 100%
+  // macos
+  -webkit-font-smoothing antialiased
+  -moz-osx-font-smoothing grayscale
+
+.l-body
+  min-width 960px
+  margin 0
+  background rgba(0, 0, 0, 0.05)
+
+.l-page
+  overflow hidden
+  max-width 1280px
+  margin 0px auto
+  background #f8fcff
+
+  @media $xlaptop
+    margin 50px auto
+    box-shadow 0 0 20px 1px rgba(0, 0, 0, 0.15)
+    border 1px solid rgba(0, 0, 0, 0.2)
+    border-radius 5px
+
+  &-inside
+    background #ededee url(../img/bg-inside.jpg) center 0 no-repeat
+
+  &-outside
+    background #ededee url(../img/bg-outside.jpg) center 0 no-repeat
+
+  &-cases
+    background #f8fcff url(../img/bg-cases.jpg) center 0 no-repeat
+
+.l-wrap
+  position relative
+  max-width 845px
+  margin 0 auto
+
+.l-main
+  display block
+  position relative
+  background #f8fcff
+
+  &-index
+    background url(../img/bg-index.jpg) center 0 no-repeat
+
+  &-inside
+    margin-top -5px
+    background none
+
+  &-padding
+    margin-top 20px
+    background none

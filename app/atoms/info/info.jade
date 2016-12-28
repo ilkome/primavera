@@ -1,0 +1,5 @@
+mixin a-infos-item(pic, name, text)
+  .infos__item.c-anim-fade-in
+    .pic: img(src="img/info-#{pic}.png", alt="alt")
+    h4.name!= name
+    .text!= text

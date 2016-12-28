@@ -1,0 +1,47 @@
+mixin a-contacts()
+  .contacts
+    .contacts__left
+      .contacts__phone
+        .name
+          | Телефон&nbsp;
+          span.alt для связи
+        .phone: +c-phone
+
+      .contacts__write
+        .email: +c-email
+        a(href="#contacts-pop").btn.btn-big.js-show-contacts-form Написать
+
+    .contacts__right
+      .contacts__map
+        .js-map
+
+  .contacts-pop#contacts-pop
+    .contacts-form.js-contacts-form
+      .c-name
+        | Обратная&nbsp;
+        span.alt связь
+      .form
+        mixin input(placeholder, name)
+          input(type="text" placeholder=placeholder name=name).input
+
+        .line
+          +input("Имя", "fname")
+          +input("Фамилия", "сname")
+        .line
+          +input("Телефон", "phone")
+          +input("E-mail", "email")
+        .line
+          textarea.textarea(rows=1 placeholder="Сообщение")
+        //- .line
+        //-   input(type="file").file
+
+        .submit
+          //- input(type="submit" value="Отпарвить").btn-yellow
+          a(href="#contacts-pop").btn.btn-yellow.js-show-contacts-thanks Отпарвить
+
+    .contacts-thanks.js-contacts-thanks
+      .c-name
+        | Спасибо за&nbsp;
+        span.alt обращение
+      .text В ближайше время наши менеджеры обработают<br>ваше сообщение и свяжуться с вами
+      .continue: a(data-remodal-action="close").btn.js-close-contacts Продолжить

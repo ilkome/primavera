@@ -1,0 +1,123 @@
+.header
+  height 172px
+
+  &-wrap
+    position relative
+    anim-all()
+
+  &-in
+    display flex
+    justify-content space-between
+    flex-flow row wrap
+    max-width 845px
+    padding 35px 0px 25px 0px
+    margin 0 auto
+    background url(../img/bg-header.jpg) 100% bottom no-repeat
+
+    &.bg-none
+      background none
+
+
+  // logo
+  // ================================================
+.header__logo
+  .logo
+    display block
+    width 225px
+    height 63px
+    background url(../img/logo.png) 0 0 no-repeat
+    background-size: 100%
+    border-bottom none
+    anim-none()
+
+
+  // contacts
+  // ================================================
+.header__contacts
+  padding-top 18px
+  padding-bottom 25px
+  text-align right
+  color $black
+
+  .phone
+    font-size 15px
+    .alt
+      display inline-block
+      padding-left 5px
+      color $orange
+      font-size 20px
+      $font500()
+
+  .email
+    font-size 12px
+
+
+  // menu
+  // ================================================
+.header__menu
+  position relative
+  z-index 2
+  width 100%
+  padding-top 10px
+
+  .menu
+    list-inline()
+
+  .item
+    padding-right 30px
+    &.active
+      .link
+        color $black
+        border-color $orange
+        cursor default
+
+  .link
+    padding-bottom 3px
+    color $black
+    font-size 13px
+    border-bottom 1px solid transparent
+
+    &:hover
+      color $orange
+
+
+// fixed
+// ===============================================
+.header-hide
+  opacity 0
+  transform translate(0, -200px)
+  anim-all()
+
+.header
+  @media $laptop
+    &-fixed
+      z-index 5
+      position fixed
+      left 0
+      top 0
+      width 100%
+      background #fff
+      opacity 1
+      transform translate(0)
+
+      & ^[0]-in
+        flex-wrap nowrap
+        align-items center
+        max-width 1000px
+        padding 15px 0px
+        padding-left 80px
+        background none
+
+
+      & ^[0]__logo
+        margin-right 55px
+        .logo
+          width 165px
+          height 46px
+          background url(../img/logo-small.png) 0 0 no-repeat
+
+      & ^[0]__menu
+        padding-top 0px
+
+      & ^[0]__contacts
+        display none

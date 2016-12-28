@@ -1,0 +1,71 @@
+.airports
+  height 678px
+
+  &__content
+    display flex
+    justify-content space-between
+
+  &__left
+    padding-top 65px
+    flex 0 0 320px
+
+  &__right
+    flex 0 0 390px
+
+
+// item
+// ===============================================
+.airports__item
+  display flex
+  align-items flex-end
+  margin-bottom 100px
+  color $white
+
+  .pic
+    padding-bottom 5px
+    padding-right 30px
+
+  .name
+    margin-bottom 15px
+    font-size 22px
+    $font500()
+    text-transform uppercase
+    text-shadow 1px 1px 3px rgba(0, 0, 0, 0.25)
+
+  .content
+    max-width 270px
+    margin 0 0 -75px -115px
+
+  .text
+    margin-bottom 20px
+    padding 10px 10px
+    font-size 20px
+    background-color alpha($white, .03)
+
+    .line
+      display inline-block
+      margin-bottom 10px
+      padding-left 25px
+      &.companies
+        background url(../img/airport-airplane.png) 0 center no-repeat
+      &.people
+        margin-bottom 0
+        background url(../img/airport-people.png) 0 center no-repeat
+
+
+// item alt
+// ===============================================
+.airports__item.alt
+  @extend .airports__item
+  display block
+  text-align center
+
+  .pic
+    padding-right 0
+
+  .name
+    margin-bottom 25px
+    font-size 30px
+
+  .content
+    margin 0 auto

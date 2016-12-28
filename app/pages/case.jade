@@ -1,0 +1,64 @@
+//- Extend layout
+//-------------------------------------------------
+include ../atoms/**/*.jade
+extends ../layout/layout
+
+
+//- Page
+//-------------------------------------------------
+block append layout-body
+  body.l-body
+    +a-loader()
+
+    .l-page
+      +a-header('cases')
+
+
+      main.l-main
+        .pathway
+          .l-wrap
+            .pathway__in
+              ul.menu
+                li.item: a(href="cases.html").link Кейсы
+                li.sep >
+                li.item: span.text Видеореклама в аэропорту
+
+        //- pathway
+
+        .case-page
+          .l-wrap.c-anim-fade-in
+            .case-page__pic
+              img(src="img/case.jpg", alt="alt").img
+            .case-page__in
+              .case-page__content
+                .case-desc
+                  .name Видеореклама в аэропорту
+                  .company Реклама в аэропортах
+                  .text На основе материалов заказчика для цикла документальных короткометражных фильмов «Жизнь как жизнь» (описание проекта короткометражных документальных фильмов; видеозаставка к фильмам – заглавный титр к проекту; описание характера видеофильмов; предложения авторов проекта по использованию образов для рекламной кампании для описанной целевой аудитории) разработать концепцию рекламной кампании и рекламный ролик.
+              .case-page__info
+                .case-info
+                  mixin case-info(name, text)
+                    .case-info__line
+                      .name= name
+                      .text= text
+                  +case-info("Заказчик:", "Hooters")
+                  +case-info("Тип рекламы:", "Рекламная стойка")
+                  +case-info("Место рекламы:", "Аэропорт Шереметьево")
+
+                  +case-info("Характеристики:", "3000х220")
+
+            .case-page__gallery
+              .case-gallery
+                mixin case-gallery-item(pic)
+                  a(href="https://placeimg.com/640/480/any" data-lightbox="case-gallery").case-gallery__item
+                    .hover
+                    .pic: img(src="img/case-gallery-#{pic}.jpg", alt="alt")
+                +case-gallery-item(1)
+                +case-gallery-item(2)
+                +case-gallery-item(3)
+                +case-gallery-item(3)
+                +case-gallery-item(3)
+        //- case-page
+
+
+        +a-contacts

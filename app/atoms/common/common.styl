@@ -1,0 +1,34 @@
+.c-name
+  margin-bottom 30px
+  color #fff
+  font-size 30px
+  line-height 38px
+  $font100()
+  letter-spacing 0.95px
+  text-transform uppercase
+  text-shadow 0 1px 5px rgba(0, 0, 0, 0.15)
+
+  .alt
+    $font500()
+
+  &.black
+    color $black
+    text-shadow none
+
+  &.right
+    text-align right
+
+  &.center
+    text-align center
+
+
+// animations
+// ===============================================
+.c-anim-fade-in
+  opacity 0
+  transform translate(0, 50px)
+  transition all 1s ease-out
+
+.c-anim-fade-in-complite
+  transform translate(0, 0)
+  opacity 1

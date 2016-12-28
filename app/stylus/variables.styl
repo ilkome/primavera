@@ -1,0 +1,72 @@
+// Colors
+// ================================================
+$white = #fff
+$yellow = #ffc80b
+$orange = #f05738
+$purple = #8b71b8
+$green = #36b65a
+$black = #232331
+$blue = #417cbe
+$color-text = $white
+$color-link = $orange
+
+
+// Fonts
+// ================================================
+@font-face
+  font-family 'MuseoSansCyrl100'
+  src url('../fonts/MuseoSansCyrl100.eot')
+  src url('../fonts/MuseoSansCyrl100.eot') format('embedded-opentype'),
+   url('../fonts/MuseoSansCyrl100.woff2') format('woff2'),
+   url('../fonts/MuseoSansCyrl100.woff') format('woff'),
+   url('../fonts/MuseoSansCyrl100.ttf') format('truetype'),
+   url('../fonts/MuseoSansCyrl100.svg#MuseoSansCyrl100') format('svg')
+
+@font-face
+  font-family 'MuseoSansCyrl300'
+  src url('../fonts/MuseoSansCyrl300.eot')
+  src url('../fonts/MuseoSansCyrl300.eot') format('embedded-opentype'),
+   url('../fonts/MuseoSansCyrl300.woff2') format('woff2'),
+   url('../fonts/MuseoSansCyrl300.woff') format('woff'),
+   url('../fonts/MuseoSansCyrl300.ttf') format('truetype'),
+   url('../fonts/MuseoSansCyrl300.svg#MuseoSansCyrl300') format('svg')
+
+@font-face
+  font-family 'MuseoSansCyrl500'
+  src url('../fonts/MuseoSansCyrl500.eot')
+  src url('../fonts/MuseoSansCyrl500.eot') format('embedded-opentype'),
+   url('../fonts/MuseoSansCyrl500.woff2') format('woff2'),
+   url('../fonts/MuseoSansCyrl500.woff') format('woff'),
+   url('../fonts/MuseoSansCyrl500.ttf') format('truetype'),
+   url('../fonts/MuseoSansCyrl500.svg#MuseoSansCyrl500') format('svg')
+
+
+$font100()
+  font-family 'MuseoSansCyrl100', sans-serif
+  font-weight 100
+
+$font300()
+  font-family 'MuseoSansCyrl300', sans-serif
+  font-weight 300
+
+$font500()
+  font-family 'MuseoSansCyrl500', sans-serif
+  font-weight 500
+
+$font-primary()
+  $font100()
+
+$font-secondary()
+  $font100()
+
+
+// Media
+// ================================================
+$laptop = "(min-width: 1000px)"
+$xlaptop = "(min-width: 1300px)"
+
+
+// Animation
+// ================================================
+$transition-time = 0.3s
+$transition-style = ease-out

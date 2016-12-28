@@ -1,0 +1,107 @@
+// item
+// ===============================================
+.case
+  z-index 2
+  position relative
+  display flex
+  align-items center
+  padding 0 50px
+
+  ^[0]_list
+    padding 0
+    padding-top 15px
+    margin-bottom 15px
+
+  &__pic
+    padding-right 70px
+
+    // .case_list:nth-child(even) .case__pic
+    ^[0]_list:nth-child(even) &
+      order 1
+      padding-right 0
+      padding-left 70px
+
+  &__content
+    margin-top 30px
+    line-height 28px
+
+    // .case_list:nth-child(even) .case__content
+    ^[0]_list:nth-child(even) &
+      padding-left 40px
+
+    .name
+      color $black
+      font-size 30px
+      $font500()
+      margin-bottom 5px
+      border-bottom 1px solid transparent
+      &:hover
+        color $orange
+        border-color $orange
+
+    .company
+      padding-bottom 15px
+      color $orange
+      font-size 20px
+      $font300()
+
+    .text
+      color $black
+      font-size 20px
+
+
+// modifications
+// ================================================
+.cases
+  position relative
+
+  &_panel
+    // background #ededee
+    padding-top 70px
+    padding-bottom 20px
+
+  &_margin
+    margin -35px -60px 0 -80px
+
+  &__more
+    z-index 2
+    position relative
+    text-align center
+    padding-top 35px
+
+
+// nav
+// ================================================
+.cases-nav
+  position absolute
+  top 45%
+  z-index 2
+  width 35px
+  height 35px
+  background red
+  background url(../img/arrow-right.png) 0 0 no-repeat
+  cursor pointer
+  anim-all()
+
+  &:hover
+    opacity .7
+    transform scale(1.2)
+
+  &.prev
+    left 25px
+    background url(../img/arrow-left.png) 0 0 no-repeat
+
+    &.swiper-button-disabled
+      left -50px
+
+  &.next
+    right 10px
+
+    &.swiper-button-disabled
+      right -50px
+
+
+// page
+// ===============================================
+.case-page
+  //

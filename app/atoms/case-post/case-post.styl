@@ -1,0 +1,87 @@
+// item
+// ===============================================
+.case-post
+  display flex
+  align-items center
+  margin-left 20px
+  padding 20px
+  margin-bottom 45px
+  background #f7fafd
+  border 1px solid rgba(0, 0, 0, 0.10)
+  box-shadow 1px 3px 5px rgba(0, 0, 0, 0.10)
+
+  &__left
+    padding-right 60px
+
+  .category
+    margin-bottom 15px
+    color $blue
+    font-size 20px
+    line-height 28px
+
+  .pic
+    margin-left -40px
+
+    .img
+      box-shadow 3px 6px 36px rgba(0, 0, 0, 0.40)
+
+  .name
+    margin-bottom 20px
+    color $black
+    font-size 25px
+    $font500()
+    margin-bottom 5px
+    // border-bottom 1px solid transparent
+
+    &:hover
+      color $orange
+      // border-color $orange
+      text-decoration underline
+
+  .company
+    padding-bottom 15px
+    color $blue
+    font-size 20px
+    $font300()
+
+  .text
+    color $black
+    font-size 20px
+    line-height 30px
+
+
+// parent
+// ===============================================
+.case-posts
+  padding-bottom 50px
+
+  &__more
+    z-index 2
+    position relative
+    text-align center
+
+
+// nav
+// ===============================================
+.case-posts__nav
+  margin-bottom 60px
+  text-align right
+  font-size 18px
+
+  .menu
+    list-inline()
+
+  .item
+    padding-left 40px
+
+    &.active .link
+      color $black
+      $font500()
+      border-bottom 2px solid $blue
+
+  .link
+    padding-bottom 5px
+    color $black
+
+    &:hover
+      color $color-link

@@ -1,0 +1,17 @@
+//- Extend layout
+//-------------------------------------------------
+include ../atoms/**/*.jade
+extends ../layout/layout
+
+
+//- Page
+//-------------------------------------------------
+block append layout-body
+  body.l-body
+    +a-loader()
+
+    .l-page
+      +a-header('contacts')
+
+      main.l-main.l-main-padding
+        +a-contacts

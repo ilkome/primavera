@@ -1,0 +1,17 @@
+mixin a-case(name, text)
+  .case
+    .case__pic
+      a(href="case.html"): img(src="img/case-index.png", alt="alt").img
+    .case__content
+      a(href="#").name= name
+      .company Michael Kors
+      .text= text
+
+mixin a-case-list(name, text, alt)
+  .case.c-anim-fade-in.case_list(class=typeof alt !== "undefined" ? "case_list-alt" : "")
+    .case__pic
+      a(href="case.html"): img(src="img/cases-inside.png", alt="alt").img
+    .case__content
+      a(href="#").name= name
+      .company Michael Kors
+      .text= text
