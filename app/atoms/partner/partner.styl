@@ -1,3 +1,4 @@
+// index
 .partners
   padding-top 80px
   padding-bottom 40px
@@ -17,3 +18,32 @@
 
       &:hover
         opacity .8
+
+// page
+.partners-page
+  margin-top 84px
+  padding-top 00px
+  padding-bottom 80px
+  background #3e77b8
+
+  &__content
+    display flex
+    flex-flow wrap
+    align-items center
+    justify-content space-between
+    padding-top 60px
+
+    &:after
+      content ''
+      flex-basis (100/3)%
+
+.partner-item
+  flex-basis (100/3)%
+  margin-bottom 70px
+  text-align center
+
+  &__name
+    padding-top 10px
+    text-transform uppercase
+    color white
+    $font500()

@@ -1,0 +1,40 @@
+//- Extend layout
+//-------------------------------------------------
+include ../atoms/**/*.jade
+extends ../layout/layout
+
+
+//- Page
+//-------------------------------------------------
+block append layout-body
+  body.l-body
+    +a-loader()
+
+    .l-page.l-page-partners
+      +a-header('partners', 'bg-none')
+
+
+      main.l-main.l-main-inside
+        .partners-page
+          .l-wrap
+            .partners-page__content
+              mixin partner()
+                .partner-item
+                  a(href="#")
+                    .partner-item__pic: img(src="img/partner.png", alt="")
+                    .partner-item__name Альфабанк
+
+              +partner
+              +partner
+              +partner
+              +partner
+              +partner
+              +partner
+              +partner
+              +partner
+              +partner
+              +partner
+              +partner
+              +partner
+
+        +a-contacts

@@ -13,18 +13,28 @@ html
   min-width 960px
   margin 0
   background rgba(0, 0, 0, 0.05)
+  @media (min-width: 1300px)
+    zoom: 120%
+  @media (min-width: 1500px)
+    zoom: 140%
+  @media (min-width: 1700px)
+    zoom: 160%
+
+@-moz-document url-prefix()
+  .l-body
+    transform-origin top center
+    @media (min-width: 1300px)
+      transform scale(1.2)
+    @media (min-width: 1500px)
+      transform scale(1.4)
+    @media (min-width: 1700px)
+      transform scale(1.6)
 
 .l-page
   overflow hidden
   max-width 1280px
   margin 0px auto
   background #f8fcff
-
-  @media $xlaptop
-    margin 50px auto
-    box-shadow 0 0 20px 1px rgba(0, 0, 0, 0.15)
-    border 1px solid rgba(0, 0, 0, 0.2)
-    border-radius 5px
 
   &-inside
     background #ededee url(../img/bg-inside.jpg) center 0 no-repeat
@@ -34,6 +44,9 @@ html
 
   &-cases
     background #f8fcff url(../img/bg-cases.jpg) center 0 no-repeat
+
+  &-partners
+    background #f8fcff url(../img/bg-partners.jpg) center 0 no-repeat
 
 .l-wrap
   position relative
